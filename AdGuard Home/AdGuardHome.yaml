@@ -1,0 +1,230 @@
+bind_host: 192.168.100.2
+bind_port: 8082
+users:
+- name: Hafizdkren-PC
+  password: $2y$05$n0enCiDmnptfvreFM5uFWOl7iSlTDhDOP89meX96LgH9m6w4cQebC
+- name: Hafizdkren-Mobile
+  password: $2y$05$9HP/K.u./TKJEOFqghbA1uIPdJ13e7L6cH1F3nNsHbZ2MqECpXSE.
+http_proxy: ""
+language: ""
+rlimit_nofile: 0
+debug_pprof: false
+web_session_ttl: 720
+dns:
+  bind_host: 192.168.100.2
+  port: 53
+  statistics_interval: 90
+  querylog_enabled: true
+  querylog_file_enabled: true
+  querylog_interval: 90
+  querylog_size_memory: 1000
+  anonymize_client_ip: false
+  protection_enabled: false
+  blocking_mode: default
+  blocking_ipv4: ""
+  blocking_ipv6: ""
+  blocked_response_ttl: 10
+  parental_block_host: family-block.dns.adguard.com
+  safebrowsing_block_host: standard-block.dns.adguard.com
+  ratelimit: 20
+  ratelimit_whitelist: []
+  refuse_any: true
+  upstream_dns:
+  - 1.1.1.1
+  - 1.0.0.1
+  - tls://1.1.1.1
+  - tls://1.0.0.1
+  - tls://1dot1dot1dot1.cloudflare-dns.com
+  - https://1.1.1.1/dns-query
+  - https://1dot1dot1dot1.cloudflare-dns.com/dns-query
+  bootstrap_dns:
+  - 1.1.1.1
+  - 1.0.0.1
+  - 2606:4700:4700::1111
+  - 2606:4700:4700::1001
+  all_servers: true
+  fastest_addr: false
+  allowed_clients: []
+  disallowed_clients: []
+  blocked_hosts: []
+  cache_size: 4194304
+  cache_ttl_min: 0
+  cache_ttl_max: 0
+  bogus_nxdomain: []
+  aaaa_disabled: false
+  enable_dnssec: true
+  edns_client_subnet: true
+  filtering_enabled: true
+  filters_update_interval: 1
+  parental_enabled: false
+  safesearch_enabled: false
+  safebrowsing_enabled: true
+  safebrowsing_cache_size: 1048576
+  safesearch_cache_size: 1048576
+  parental_cache_size: 1048576
+  cache_time: 30
+  rewrites: []
+  blocked_services: []
+tls:
+  enabled: false
+  server_name: ""
+  force_https: false
+  port_https: 443
+  port_dns_over_tls: 853
+  allow_unencrypted_doh: false
+  strict_sni_check: false
+  certificate_chain: ""
+  private_key: ""
+  certificate_path: ""
+  private_key_path: ""
+filters:
+- enabled: true
+  url: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
+  name: AdGuard DNS filter
+  id: 1
+- enabled: true
+  url: https://adaway.org/hosts.txt
+  name: AdAway
+  id: 2
+- enabled: true
+  url: https://www.malwaredomainlist.com/hostslist/hosts.txt
+  name: MalwareDomainList.com Hosts List
+  id: 4
+- enabled: true
+  url: https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt
+  name: NoCoin Filter List
+  id: 1596915006
+- enabled: true
+  url: https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt
+  name: Spam404
+  id: 1596915007
+- enabled: true
+  url: https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list
+  name: The Big List of Hacked Malware Web Sites
+  id: 1596915008
+- enabled: true
+  url: https://ssl.bblck.me/blacklists/ublock-origin.txt
+  name: BarbBlock
+  id: 1596915009
+- enabled: true
+  url: https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt
+  name: Scam Blocklist by DurableNapkin
+  id: 1596915010
+- enabled: true
+  url: https://anti-ad.net/easylist.txt
+  name: 'CHN: anti-AD'
+  id: 1596915011
+- enabled: true
+  url: https://280blocker.net/files/280blocker_domain.txt
+  name: 'JPN: 280blocker adblock domain lists'
+  id: 1596915014
+- enabled: true
+  url: https://raw.githubusercontent.com/yous/YousList/master/hosts.txt
+  name: 'KOR: YousList'
+  id: 1596915015
+- enabled: true
+  url: https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/abpindo.txt
+  name: ABP-Indo
+  id: 1596915022
+- enabled: true
+  url: https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/abpindo_noannoyance.txt
+  name: ABP-Indo_noannoyance
+  id: 1596915023
+- enabled: true
+  url: https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/abpindo_noelemhide.txt
+  name: ABP-Indo_noelementhide
+  id: 1596915024
+- enabled: true
+  url: https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/annoyances.txt
+  name: uBlock-annoyances
+  id: 1596915026
+- enabled: true
+  url: https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt
+  name: uBlock-badware
+  id: 1596915027
+- enabled: true
+  url: https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2020.txt
+  name: uBlock-Filter_2020
+  id: 1596915028
+- enabled: true
+  url: https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt
+  name: uBlock-Filter
+  id: 1596915029
+- enabled: true
+  url: https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt
+  name: uBlock-resource_abuse
+  id: 1596915032
+- enabled: true
+  url: https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt
+  name: uBlock-privacy
+  id: 1596915033
+- enabled: true
+  url: https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/legacy.txt
+  name: uBlock-legacy
+  id: 1596915034
+- enabled: true
+  url: https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt
+  name: uBlock-unbreak
+  id: 1596915035
+- enabled: true
+  url: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/general_url.txt
+  name: Adguard-mobile_generalurl
+  id: 1596915037
+- enabled: true
+  url: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/adservers.txt
+  name: Adguard-mobile_adserver
+  id: 1596915038
+- enabled: true
+  url: https://raw.githubusercontent.com/hafizdkren/AdGuard-youtube_custom/master/adlist
+  name: Hilman-youtube_adblock
+  id: 1596915041
+- enabled: true
+  url: https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt
+  name: AdAway default blocklist
+  id: 1597008276
+whitelist_filters: []
+user_rules: []
+dhcp:
+  enabled: false
+  interface_name: ""
+  gateway_ip: ""
+  subnet_mask: ""
+  range_start: ""
+  range_end: ""
+  lease_duration: 86400
+  icmp_timeout_msec: 1000
+clients:
+- name: Hilman Hazazi
+  tags:
+  - device_laptop
+  ids:
+  - D0:17:C2:B9:42:E3
+  use_global_settings: true
+  filtering_enabled: false
+  parental_enabled: false
+  safesearch_enabled: false
+  safebrowsing_enabled: false
+  use_global_blocked_services: true
+  blocked_services: []
+  upstreams: []
+- name: Hilman Hazazi (Android)
+  tags:
+  - device_phone
+  ids:
+  - d8:ce:3a:58:78:a9
+  use_global_settings: true
+  filtering_enabled: false
+  parental_enabled: false
+  safesearch_enabled: false
+  safebrowsing_enabled: false
+  use_global_blocked_services: true
+  blocked_services: []
+  upstreams: []
+log_compress: false
+log_localtime: false
+log_max_backups: 0
+log_max_size: 100
+log_max_age: 3
+log_file: ""
+verbose: false
+schema_version: 6
